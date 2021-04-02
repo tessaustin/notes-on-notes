@@ -1,7 +1,7 @@
 # Notes On Notes
 
 ## Description:
-User can write and save notes. Keeping track and staying organized
+User can write and save notes to help them keep track and stay organized
 
 ## Licensing:
 [![License](https://img.shields.io/badge/License-isc-blue.svg)](https://shields.io)
@@ -34,5 +34,5 @@ Please reach me through my Github account or my email with any additional questi
 - Email: tessaustin92@gmail.com 
 
 ## Screenshot:
-![img2](Assets/landingpage.png)
+![img](Assets/landingpage.png)
 ![img2](Assets/11-express-homework-demo-01.png)
