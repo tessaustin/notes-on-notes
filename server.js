@@ -1,7 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express');
-const { noteData } = require('./db/db.json')
+const { noteData } = require('./db/db.json');
+const { json } = require('express');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -77,13 +78,41 @@ app.get('/api/notes/:id', (req, res) => {
 app.post('/api/notes', (req, res) => {
     // set id based on what the next index of the array will be
     req.body.id = noteData.length.toString();
-    if(!validateNoteData(req.body)) {
+    if (!validateNoteData(req.body)) {
         res.status(400).send('Your note is not properly formatted.')
     } else {
         const newNote = createNewNote(req.body, noteData);
         res.json(newNote);
     }
 });
+
+//////START BOUNUS//////
+
+app.delete("/api/notes/:id", (req, res) => {
+        
+    // Obtains id and converts to a string
+    let id = req.params.id.toString();
+    console.log(id);
+
+    // Goes through notesArray searching for matching ID
+    for (i=0; i < noteData.length; i++){
+       
+        if (noteData[i].id == id){
+            console.log("Copy that!");
+            // responds with deleted note
+            res.send(noteData[i]);
+
+            // Removes the deleted note
+            noteData.splice(i,1);
+            break;
+        }
+    }
+
+    (noteData);
+
+});
+
+//////END BOUNUS//////
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
@@ -96,4 +125,3 @@ app.get('/notes', (req, res) => {
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
-
