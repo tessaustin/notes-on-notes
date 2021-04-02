@@ -107,7 +107,7 @@ app.delete("/api/notes/:id", (req, res) => {
 
 //////END BOUNUS//////
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
