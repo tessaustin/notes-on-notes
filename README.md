@@ -1,7 +1,7 @@
 # Notes On Notes
 
 ## Description:
-User can write and save notes. Keeping track and staying organized
+User can write and save notes to help them keep track and stay organized
 
 ## Licensing:
 [![License](https://img.shields.io/badge/License-isc-blue.svg)](https://shields.io)
