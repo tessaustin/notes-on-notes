@@ -34,4 +34,5 @@ Please reach me through my Github account or my email with any additional questi
 - Email: tessaustin92@gmail.com 
 
 ## Screenshot:
-![img](Assets/11-express-homework-demo-01.png)
+![img](Assets/landingpage.png)
+![img2](Assets/11-express-homework-demo-01.png)
