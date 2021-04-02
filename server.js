@@ -90,19 +90,12 @@ app.post('/api/notes', (req, res) => {
 
 app.delete("/api/notes/:id", (req, res) => {
         
-    // Obtains id and converts to a string
     let id = req.params.id.toString();
-    console.log(id);
 
-    // Goes through notesArray searching for matching ID
     for (i=0; i < noteData.length; i++){
        
         if (noteData[i].id == id){
-            console.log("Copy that!");
-            // responds with deleted note
             res.send(noteData[i]);
-
-            // Removes the deleted note
             noteData.splice(i,1);
             break;
         }
